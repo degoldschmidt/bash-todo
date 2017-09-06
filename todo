@@ -1,0 +1,10 @@
+#!/bin/bash
+filename="dat/log.txt"
+
+readarray -t lines <<< "$(sed -n '/^#.*/,/^##.*/p' "$filename")"
+
+for line in "${lines[@]}"; do
+
+     : # Do all your additional processing here, with a clean input.
+
+done 
